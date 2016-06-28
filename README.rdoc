@@ -1,9 +1,17 @@
+{<img src="https://codeclimate.com/github/brunossilveira/profiler/badges/gpa.svg" />}[https://codeclimate.com/github/brunossilveira/profiler]
+
 = brunossilveira-profiler
 
-Description goes here.
+This is a gem that reads through a file that contains historical information on phone line bill, divides the data into categories (local calls, long distance calls, SMS and internet) and outputs the consumption.
+
+== Usage
+
+`gem install brunossilveira-profiler`
+
+`profile <file> <phone-number>`
 
 == Contributing to brunossilveira-profiler
- 
+
 * Check out the latest master to make sure the feature hasn't been implemented or the bug hasn't been fixed yet.
 * Check out the issue tracker to make sure someone already hasn't requested it and/or contributed it.
 * Fork the project.
