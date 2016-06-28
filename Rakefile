@@ -17,7 +17,7 @@ Juwelier::Tasks.new do |gem|
   gem.name = "brunossilveira-profiler"
   gem.homepage = "http://github.com/brunossilveira/profiler"
   gem.license = "MIT"
-  gem.summary = %Q{Report of phone line consumption }
+  gem.summary = %Q{Report of phone line consumption}
   gem.description = %Q{Analyses file, extracts consumption information on calls, internet usage and SMS}
   gem.email = "djbrunosilveira@gmail.com"
   gem.authors = ["Bruno Saibro Silveira"]
