@@ -1,0 +1,5 @@
+#!/usr/bin/env ruby
+
+require 'brunossilveira-profiler'
+
+exit Brunossilveira::Profiler.run!(*ARGV)

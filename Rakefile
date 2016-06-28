@@ -11,19 +11,19 @@ rescue Bundler::BundlerError => e
 end
 require 'rake'
 
-require 'jeweler'
-Jeweler::Tasks.new do |gem|
+require 'juwelier'
+Juwelier::Tasks.new do |gem|
   # gem is a Gem::Specification... see http://guides.rubygems.org/specification-reference/ for more options
   gem.name = "brunossilveira-profiler"
-  gem.homepage = "http://github.com/brunossilveira/brunossilveira-profiler"
+  gem.homepage = "http://github.com/brunossilveira/profiler"
   gem.license = "MIT"
-  gem.summary = %Q{TODO: one-line summary of your gem}
-  gem.description = %Q{TODO: longer description of your gem}
+  gem.summary = %Q{Report of phone line consumption }
+  gem.description = %Q{Analyses file, extracts consumption information on calls, internet usage and SMS}
   gem.email = "djbrunosilveira@gmail.com"
   gem.authors = ["Bruno Saibro Silveira"]
   # dependencies defined in Gemfile
 end
-Jeweler::RubygemsDotOrgTasks.new
+Juwelier::RubygemsDotOrgTasks.new
 
 require 'rspec/core'
 require 'rspec/core/rake_task'
