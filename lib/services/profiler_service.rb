@@ -2,19 +2,20 @@ require 'csv'
 
 class ProfilerService
 
-  attr_reader :file_name
+  attr_reader :options
 
   def initialize(*args)
-    @file_name = args[0]
-    @phone_number = args[1]
+    @options = args
   end
 
   def call
+    parsed_options = Parser.new(options).parse!
+    result = Mapper.new(parsed_options[:file_name]).map
+
     require 'pry';binding.pry
-    csv_text = File.read(File.join(Dir.pwd, file_name))
-    csv = CSV.parse(csv_text, :headers => true)
-    csv.each do |row|
-      Moulding.create!(row.to_hash)
-    end
+    puts result
+
+    #Read and convert from file
+    #analyse data
   end
 end

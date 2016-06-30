@@ -11,26 +11,32 @@ Gem::Specification.new do |s|
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.require_paths = ["lib"]
   s.authors = ["Bruno Saibro Silveira"]
-  s.date = "2016-06-28"
+  s.date = "2016-06-30"
   s.description = "Analyses file, extracts consumption information on calls, internet usage and SMS"
   s.email = "djbrunosilveira@gmail.com"
   s.executables = ["profiler"]
   s.extra_rdoc_files = [
     "LICENSE.txt",
-    "README.rdoc"
+    "README.md"
   ]
   s.files = [
     ".document",
+    ".rake_tasks",
     ".rspec",
     "Gemfile",
     "LICENSE.txt",
-    "README.rdoc",
+    "README.md",
     "Rakefile",
     "VERSION",
     "bin/profiler",
+    "brunossilveira-profiler.gemspec",
     "lib/brunossilveira-profiler.rb",
+    "lib/models/row.rb",
     "lib/services/profiler_service.rb",
-    "spec/brunossilveira-profiler_spec.rb",
+    "lib/utils/mapper.rb",
+    "lib/utils/messages.rb",
+    "lib/utils/parser.rb",
+    "spec/services/profiler_service_spec.rb",
     "spec/spec_helper.rb"
   ]
   s.homepage = "http://github.com/brunossilveira/profiler"
@@ -42,14 +48,14 @@ Gem::Specification.new do |s|
     s.specification_version = 4
 
     if Gem::Version.new(Gem::VERSION) >= Gem::Version.new('1.2.0') then
-      s.add_development_dependency(%q<rspec>, ["~> 2.8.0"])
+      s.add_development_dependency(%q<rspec>, ["~> 3.0.0"])
       s.add_development_dependency(%q<rdoc>, ["~> 3.12"])
       s.add_development_dependency(%q<bundler>, ["~> 1.0"])
       s.add_development_dependency(%q<juwelier>, ["~> 2.1.0"])
       s.add_development_dependency(%q<simplecov>, [">= 0"])
       s.add_development_dependency(%q<pry-byebug>, ["~> 2.0.0"])
     else
-      s.add_dependency(%q<rspec>, ["~> 2.8.0"])
+      s.add_dependency(%q<rspec>, ["~> 3.0.0"])
       s.add_dependency(%q<rdoc>, ["~> 3.12"])
       s.add_dependency(%q<bundler>, ["~> 1.0"])
       s.add_dependency(%q<juwelier>, ["~> 2.1.0"])
@@ -57,7 +63,7 @@ Gem::Specification.new do |s|
       s.add_dependency(%q<pry-byebug>, ["~> 2.0.0"])
     end
   else
-    s.add_dependency(%q<rspec>, ["~> 2.8.0"])
+    s.add_dependency(%q<rspec>, ["~> 3.0.0"])
     s.add_dependency(%q<rdoc>, ["~> 3.12"])
     s.add_dependency(%q<bundler>, ["~> 1.0"])
     s.add_dependency(%q<juwelier>, ["~> 2.1.0"])
