@@ -1,4 +1,6 @@
-class Row
+require 'time'
+
+class Call
   attr_reader :minutes, :seconds
 
   def initialize(value)
