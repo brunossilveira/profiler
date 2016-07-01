@@ -2,4 +2,4 @@
 
 require 'brunossilveira-profiler'
 
-exit Brunossilveira::Profiler.run!(*ARGV)
+Brunossilveira::Profiler.run!(*ARGV)

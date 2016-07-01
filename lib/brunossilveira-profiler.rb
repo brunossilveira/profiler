@@ -5,6 +5,7 @@ require 'models/row'
 require 'utils/mapper'
 require 'utils/messages'
 require 'utils/parser'
+require 'utils/profiler'
 
 # Services
 require 'services/profiler_service'

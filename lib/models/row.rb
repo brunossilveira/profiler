@@ -1,22 +1,33 @@
 require 'time'
 
-class Call
-  attr_reader :minutes, :seconds
+class Row
+  attr_accessor :total
+  attr_reader :data, :type
 
-  def initialize(value)
-    value = value.to_s.split('m').map { |v| v.sub(/\D+/, '') } || []
+  def initialize(data, type)
+    @data = data.to_s.split('m').map { |v| v.sub(/\D+/, '') } || []
+    @type = type
 
-    @minutes = value.size > 1 ? value.first : '00'
-    @seconds = value.size > 1 ? value.last : '00'
-  end
-
-  def total_in_seconds
     convert
   end
 
   private
 
   def convert
+    if data.size == 2
+      @total = convert_time(data.first, data.last)
+    elsif data.size == 1
+      @total = convert_bytes(data.first)
+    else
+      @total = 1
+    end
+  end
+
+  def convert_bytes(value)
+    value.gsub(',', '.').to_f
+  end
+
+  def convert_time(minutes, seconds)
     time = Time.parse("00:#{minutes}:#{seconds}")
 
     time.to_i - beginning.to_i
