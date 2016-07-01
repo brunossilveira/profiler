@@ -40,7 +40,10 @@ Gem::Specification.new do |s|
     "spec/models/row_spec.rb",
     "spec/services/profiler_service_spec.rb",
     "spec/spec_helper.rb",
-    "spec/utils/parser_spec.rb"
+    "spec/test.csv",
+    "spec/utils/mapper_spec.rb",
+    "spec/utils/parser_spec.rb",
+    "spec/utils/profiler_spec.rb"
   ]
   s.homepage = "http://github.com/brunossilveira/profiler"
   s.licenses = ["MIT"]
